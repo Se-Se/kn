@@ -1,0 +1,1 @@
+export { GenericReport } from './GenericReport';

@@ -1,0 +1,13 @@
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 62 (91390) - https://sketch.com -->
+    <title>密钥管理</title>
+    <desc>Created with Sketch.</desc>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="设计资源" transform="translate(-28.000000, -31.000000)">
+            <g id="密钥管理" transform="translate(28.000000, 31.000000)">
+                <rect id="矩形备份-64" x="0" y="0" width="16" height="16"></rect>
+                <path d="M8,0 C3.582,0 0,3.582 0,8 C0,12.418 3.582,16 8,16 C12.418,16 16,12.418 16,8 C16,3.582 12.418,0 8,0 L8,0 Z M14,8 C14,11.309 11.309,14 8,14 C4.691,14 2,11.309 2,8 C2,4.691 4.691,2 8,2 C11.309,2 14,4.691 14,8 Z M10,8 L10,7 L8,7 L8,6 L10,6 L10,5 L9,4 L6,4 L6,8 L5,9 L5,12 L11,12 L11,9 L10,8 Z M7,11 L9,11 L9,10 L7,10 L7,11 Z" id="Fill-1" fill="#888888"></path>
+            </g>
+        </g>
+    </g>
+</svg>

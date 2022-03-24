@@ -1,0 +1,1 @@
+export const fileServiceIp = 'http://9.135.96.38:20002/file_server/api_v1/uploadPerpetualFile';

@@ -1,0 +1,65 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-width: 1280px;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+#root , .app {
+  height: 100%;
+}
+
+/* disable google translate */
+#gtx-trans {
+  display: none;
+}
+
+.is-disabled .tea-icon {
+  filter: grayscale();
+}
+
+/* fix disabled icon */
+.tea-btn.is-disabled .tea-icon {
+  cursor: not-allowed;
+}
+
+
+
+/*定义滚动条高宽及背景
+ 高宽分别对应横竖滚动条的尺寸*/
+ ::-webkit-scrollbar
+ {
+     width:5px;
+     height: 5px;
+     background-color:white;
+ }
+ /*定义滚动条轨道
+  内阴影+圆角*/
+ ::-webkit-scrollbar-track
+ {
+     -webkit-box-shadow:inset 0 0 6px rgba(0,0,0,0.3);
+     box-shadow:inset 0 0 6px rgba(0,0,0,0.3);
+     border-radius:10px;
+     background-color:white;
+ }
+ /*定义滑块
+  内阴影+圆角*/
+ ::-webkit-scrollbar-thumb
+ {
+     border-radius:10px;
+     box-shadow:inset 0 0 6px rgba(0,0,0,.3);
+     -webkit-box-shadow:inset 0 0 6px rgba(0,0,0,.3);
+     background-color:#DCDCDC;
+ }
+ @font-face{
+   font-family: 'tdiv';
+   src: url('./font/TencentSans-W7.ttf');
+ }

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>等待</title>
+    <g id="腾讯云控制台组件库UIKit" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="组件库" transform="translate(-778.000000, -605.000000)">
+            <g id="操作类图标" transform="translate(211.000000, 393.000000)">
+                <g id="等待" transform="translate(567.000000, 212.000000)">
+                    <rect id="矩形" x="0" y="0" width="32" height="32"></rect>
+                    <path d="M20.4395,23.061 L14.0005,16.622 L14.0005,7 L17.0005,7 L17.0005,15.379 L22.5605,20.94 L20.4395,23.061 Z M15.5005,28 C8.6075,28 3.0005,22.393 3.0005,15.5 C3.0005,8.608 8.6075,3 15.5005,3 C22.3925,3 28.0005,8.608 28.0005,15.5 C28.0005,22.393 22.3925,28 15.5005,28 L15.5005,28 Z M0.0005,15.5 C0.0005,24.061 6.9395,31 15.5005,31 C24.0605,31 31.0005,24.061 31.0005,15.5 C31.0005,6.94 24.0605,0 15.5005,0 C6.9395,0 0.0005,6.94 0.0005,15.5 Z" id="Fill-1" fill="#006EFF"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

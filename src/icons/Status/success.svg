@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>正确</title>
+    <g id="腾讯云控制台组件库UIKit" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="组件库" transform="translate(-671.000000, -605.000000)">
+            <g id="操作类图标" transform="translate(211.000000, 393.000000)">
+                <g id="正确" transform="translate(460.000000, 212.000000)">
+                    <rect id="矩形" x="0" y="0" width="32" height="32"></rect>
+                    <path d="M15.5,0 C24.061,0 31,6.939 31,15.5 C31,24.061 24.061,31 15.5,31 C6.939,31 0,24.061 0,15.5 C0,6.939 6.939,0 15.5,0 Z M15.5,3 C8.607,3 3,8.607 3,15.5 C3,22.393 8.607,28 15.5,28 C22.393,28 28,22.393 28,15.5 C28,8.607 22.393,3 15.5,3 Z M21.114,9.9465 L23.235,12.0685 L15.371,19.9315 L13.25,22.0525 L11.129,19.9315 L7.765,16.5685 L9.886,14.4465 L13.25,17.8105 L21.114,9.9465 Z" id="合并形状" fill="#0ABF5B"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

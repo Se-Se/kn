@@ -1,0 +1,4 @@
+[submodule "schema"]
+	path = schema
+	url = git@git.woa.com:sysauditor/schema.git
+	branch = master

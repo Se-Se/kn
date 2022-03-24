@@ -1,0 +1,139 @@
+.report-view
+  .markdown-dialog-icon
+    cursor: pointer
+    .plaint-icon
+      width: 16px
+      height: 16px
+  .exp-chain
+    pre
+      display: block
+      overflow-x: auto
+      padding: 1em 0.5em
+      background: rgb(240, 240, 240)
+      color: rgb(68, 68, 68)
+  table.icfg-view , table.cfg-view , table.table-list
+    table-layout: fixed
+    border-collapse: collapse
+    width: 100%
+    tr
+      td
+        padding: 0
+      td:first-child
+        width: 2em
+        vertical-align: top
+        span
+          border-right: 1px solid #eef0f4
+          text-align: left
+          padding-right: 0.8em
+          display: inline-block
+      td:nth-child(2)
+        & > div
+          margin-bottom: 10px
+  .icfg-view
+    div.path-view
+      width: 100%
+      display: flex
+      flex-direction: row
+      line-height: 1.5em
+      max-height: 600px
+      overflow-y: auto
+      .path
+        flex: none
+        pre
+          max-width: 100px
+          overflow-x: auto
+          background: rgb(240, 240, 240)
+          text-align: center
+          display: block
+          padding: 1em 1em 1em 1em
+          padding-right: 0
+          color: rgb(68, 68, 68)
+          code:not(:empty)
+            background: #ddd
+            padding: 0 0.5em
+            height: 20px
+            border-radius: 5px
+          code.first , code.last
+            background: #0abf5b
+            color: #fff
+          span:not(.empty)
+            display: inline-block
+            width: 100%
+            position: relative
+
+      .code
+        width: 1px
+        flex: auto
+        & > div
+          padding-left: 1.5em
+          background: rgb(240, 240, 240)
+  .suggestion
+    margin-top: 1em
+    line-height: 2em
+    pre
+      line-height: 1.5em
+  .intent-1
+    padding-left: 2em
+  .manifest
+    hr
+      margin: 0
+    .signature
+      .kv-key
+        color: #999 !important
+    .exported-components
+      .kv-key
+        border-right: 1px solid #eef0f4
+    .permission , .thirdparty
+      h2
+        padding-right: 1em
+      .kvpair
+        width: 100%
+        word-break: break-all
+      .kv-index
+        width: 1px
+        .no
+          display: inline-block
+          padding-right: 10px
+          line-height: 30px
+          white-space: nowrap
+      .kv-key
+        border-left: 1px solid #eef0f4
+        padding-left: 10px
+      .kv-level
+        padding-right: 20px
+        .legend
+          width: 20px
+          height: 10px
+      .kv-value
+        width: 50%
+    h2
+      padding: 1em 0 0 0
+    h3
+      padding-top: 1em
+  .check-block
+    h3
+      margin-bottom: 1em
+  details
+    summary
+      cursor: pointer
+      h3
+        display: inline
+      &:focus
+        outline: 0
+  .activity-name
+    display: block
+    margin-bottom: 1.5em
+    font-size: 1.1em
+  .constant-key
+    .code-div
+      display: block
+      padding: 0.5em
+      background: rgb(240, 240, 240)
+      color: rgb(68, 68, 68)
+      margin: 1em 0px
+      code
+        word-break: break-all
+
+.markdown-dialog
+  .markdown
+    overflow-x: auto

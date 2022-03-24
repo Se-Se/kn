@@ -1,0 +1,28 @@
+overwrite: true
+schema:
+  - "schema/schema.graphql"
+documents:
+  - "schema/documents/query.graphql"
+  - "schema/documents/sys.graphql"
+  - "schema/documents/apk.graphql"
+generates:
+  src/generated/graphql.tsx:
+    plugins:
+      - "typescript"
+      - "typescript-operations"
+      - "typescript-react-apollo"
+    config:
+      scalars:
+        Map: Record<string, any>
+        Bool: "'Enabled' | 'Disable'"
+        Time: string
+      withComponent: false
+      withHOC: false
+      withHooks: true
+      gqlImport: graphql.macro#gql
+      apolloReactCommonImportFrom: "@apollo/client"
+      apolloReactHooksImportFrom: "@apollo/client"
+      documentMode: documentNode
+  src/generated/apollo-helpers.ts:
+    plugins:
+      - typescript-apollo-client-helpers

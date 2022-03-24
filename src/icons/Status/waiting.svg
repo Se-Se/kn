@@ -1,0 +1,11 @@
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>time</title>
+    <desc>Created with Sketch.</desc>
+    <g id="time" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="编组">
+            <rect id="矩形" fill="#FFFFFF" opacity="0" x="0" y="0" width="16" height="16"></rect>
+            <path d="M14,8 C14,4.691 11.309,2 8,2 C4.691,2 2,4.691 2,8 C2,11.309 4.691,14 8,14 C11.309,14 14,11.309 14,8 L14,8 Z M16,8 C16,12.418 12.418,16 8,16 C3.582,16 0,12.418 0,8 C0,3.582 3.582,0 8,0 C12.418,0 16,3.582 16,8 L16,8 Z M9,7.586 L11.707,10.292 L10.293,11.707 L7,8.414 L7,4 L9,4 L9,7.586 Z" id="Fill-1" fill="#ff9c19"></path>
+        </g>
+    </g>
+</svg>
