@@ -67,230 +67,7 @@ const componentsList: any = [
 
 ]
 
-const testData:any={
-  "cells": [
-      {
-          "position": {
-              "x": 40,
-              "y": 40
-          },
-          "size": {
-              "width": 100,
-              "height": 40
-          },
-          "attrs": {
-              "text": {
-                  "text": "Hello"
-              },
-              "body": {
-                  "rx": 10,
-                  "ry": 10
-              }
-          },
-          "shape": "rect",
-          "id": "6e5b66ae-fa8a-4f7f-b80c-455203bb8fc5",
-          "zIndex": 1
-      },
-      {
-          "position": {
-              "x": 240,
-              "y": 180
-          },
-          "size": {
-              "width": 100,
-              "height": 40
-          },
-          "attrs": {
-              "text": {
-                  "text": "World"
-              }
-          },
-          "shape": "ellipse",
-          "id": "250328cf-d934-4eb8-8043-46eafa39c4eb",
-          "zIndex": 2
-      },
-      {
-          "shape": "edge",
-          "id": "9502dfdd-c9ed-4dbb-9102-ce030dbf5310",
-          "zIndex": 3,
-          "source": {
-              "cell": "6e5b66ae-fa8a-4f7f-b80c-455203bb8fc5"
-          },
-          "target": {
-              "cell": "250328cf-d934-4eb8-8043-46eafa39c4eb"
-          }
-      },
-      {
-          "position": {
-              "x": 120,
-              "y": 260
-          },
-          "size": {
-              "width": 160,
-              "height": 124
-          },
-          "view": "react-shape-view",
-          "attrs": {
-              "body": {
-                  "strokeWidth": 1
-              },
-              "label": {
-                  "fontSize": 15
-              }
-          },
-          "shape": "react-shape",
-          "id": "cfbba0fe-e2d6-4621-9f2c-97b4ddcc648f",
-          "data": {
-              "componentName": "ICMICMICMadsadad111",
-              "system": [
-                  "123",
-                  "123"
-              ],
-              "x": 350,
-              "y": 100,
-              "type": "ecu",
-              "id": "mobileGreenComponent"
-          },
-          "component": {
-              "key": null,
-              "ref": null,
-              "props": {},
-              "_owner": null,
-              "_store": {}
-          },
-          "portMarkup": [
-              {
-                  "tagName": "foreignObject",
-                  "selector": "fo",
-                  "children": [
-                      {
-                          "ns": "http://www.w3.org/1999/xhtml",
-                          "tagName": "body",
-                          "selector": "foBody",
-                          "attrs": {
-                              "xmlns": "http://www.w3.org/1999/xhtml"
-                          },
-                          "style": {
-                              "width": "100%",
-                              "height": "100%",
-                              "background": "transparent"
-                          },
-                          "children": [
-                              {
-                                  "tagName": "div",
-                                  "selector": "foContent",
-                                  "style": {
-                                      "width": "100%",
-                                      "height": "100%"
-                                  }
-                              }
-                          ]
-                      }
-                  ]
-              }
-          ],
-          "ports": {
-              "items": [
-                  {
-                      "group": "in",
-                      "id": "top1"
-                  },
-                  {
-                      "group": "in",
-                      "id": "top2"
-                  },
-                  {
-                      "group": "inLeft",
-                      "id": "left1"
-                  },
-                  {
-                      "group": "inLeft",
-                      "id": "left2"
-                  },
-                  {
-                      "group": "out",
-                      "id": "bottom1"
-                  },
-                  {
-                      "group": "out",
-                      "id": "bottom2"
-                  },
-                  {
-                      "group": "outRight",
-                      "id": "right3"
-                  },
-                  {
-                      "group": "outRight",
-                      "id": "right4"
-                  }
-              ],
-              "groups": {
-                  "in": {
-                      "position": {
-                          "name": "top"
-                      },
-                      "attrs": {
-                          "fo": {
-                              "width": 10,
-                              "height": 10,
-                              "x": -10,
-                              "y": -10,
-                              "magnet": "true"
-                          }
-                      },
-                      "zIndex": 10000
-                  },
-                  "inLeft": {
-                      "position": {
-                          "name": "left"
-                      },
-                      "attrs": {
-                          "fo": {
-                              "width": 10,
-                              "height": 10,
-                              "x": -10,
-                              "y": -10,
-                              "magnet": "true"
-                          }
-                      },
-                      "zIndex": 10000
-                  },
-                  "out": {
-                      "position": {
-                          "name": "bottom"
-                      },
-                      "attrs": {
-                          "fo": {
-                              "width": 10,
-                              "height": 10,
-                              "x": -10,
-                              "y": -10,
-                              "magnet": "true"
-                          }
-                      },
-                      "zIndex": 10000
-                  },
-                  "outRight": {
-                      "position": {
-                          "name": "right"
-                      },
-                      "attrs": {
-                          "fo": {
-                              "width": 10,
-                              "height": 10,
-                              "x": -10,
-                              "y": -10,
-                              "magnet": "true"
-                          }
-                      },
-                      "zIndex": 10000
-                  }
-              }
-          },
-          "zIndex": 4
-      }
-  ]
-}
+
 // const Style = style.div`
 //  width:100%;
 //  height:800px;
@@ -394,6 +171,7 @@ export const AntVPage: React.FC<Props> = (props: Props) => {
   const theRef = useRef<any>();
   const theRefStencil = useRef<any>();
   const [activeList, setActiveList] = useState<any>('');// ecu |mobile|cloud|components
+  const [graphData, setGraphData] = useState<any>(null);
 
   useEffect(() => {
     console.log('antvProps-->', props)
@@ -419,7 +197,7 @@ export const AntVPage: React.FC<Props> = (props: Props) => {
       size: { width, height },
       id: item.id,
       data: item,
-      component: <CircleComponent ></CircleComponent>,
+      component: 'my-circleComponent',
       portMarkup: [Markup.getForeignObjectMarkup()],
       // label: item.text,
       attrs: {
@@ -520,7 +298,7 @@ export const AntVPage: React.FC<Props> = (props: Props) => {
       height: height,
       id: item.id,
       data: item,
-      component: <SmallComponent ></SmallComponent>,
+      component: 'my-smallComponent',
       portMarkup: [Markup.getForeignObjectMarkup()],
       // label: item.text,
       attrs: {
@@ -626,7 +404,7 @@ export const AntVPage: React.FC<Props> = (props: Props) => {
     const cellularComponent = makeSmallComponentOptions({ data: { type: 'cellular' }, type: 'smallComponent', x: 1050, y: 200, id: 'cellularComponent', isHasBg: false });
 
 
-    const graphObj = new Graph({
+    const graphObj: any = new Graph({
       container: theRef.current,
       grid: false,
       history: true,
@@ -690,7 +468,11 @@ export const AntVPage: React.FC<Props> = (props: Props) => {
       //   allowBlank: false,
       //   router:'manhattan'
       // },
-    })
+    });
+    graphObj.registerReactComponent('my-smallComponent', <SmallComponent />);
+    graphObj.registerReactComponent('my-circleComponent', <CircleComponent />);
+
+
     const mobileGreenComponent = makeCircleOptions({ componentName: '手机', system: ['iOS', 'AliOs'], x: 50, y: 200, type: 'mobile', id: 'mobileGreenComponent' });
     const groupNodes = [ecuBlueComponent, ecuBlueComponent1, ecuBlueComponent2].map((item) => graphObj.addNode(item));
     graphObj.addNodes([mobileGreenComponent]);
@@ -714,7 +496,7 @@ export const AntVPage: React.FC<Props> = (props: Props) => {
         parent: true,
       },
     })
-    graphObj.on('node:contextmenu', ({ e, x, y, node, view }) => {
+    graphObj.on('node:contextmenu', ({ e, x, y, node, view }: any) => {
       console.log(e, x, y, node, view)
       console.log(node.getData())
       // console.log(node.getParent())
@@ -734,6 +516,7 @@ export const AntVPage: React.FC<Props> = (props: Props) => {
       console.log(node.getData())
       // console.log(node.hasChanged('data'))
       console.log(graphObj.toJSON())
+      setGraphData(graphObj.toJSON());
       // graphObj.fromJSON(testData);
     })
     parent.addChild(graphObj.getCellById('ecuBlueComponent'))
@@ -773,7 +556,7 @@ export const AntVPage: React.FC<Props> = (props: Props) => {
   const startDrag = (e: any, data: any) => {
     const smallComponentsOptions = makeSmallComponentOptions(data);
     const partsOptions = makeCircleOptions(data);
-    
+
 
     const target: any = e.currentTarget
     const type: any = target.getAttribute('data-type')
@@ -789,12 +572,13 @@ export const AntVPage: React.FC<Props> = (props: Props) => {
   // 点击左侧list 展开列表
   const listClick = (n: any) => {
     setActiveList(n === activeList ? '' : n);
-    graph.fromJSON(testData);
+    
   }
 
   return (
     <Style>
       <div className="kn-app">
+        <Button onClick={()=>graph.fromJSON(graphData)}>添加</Button>
         <ListContent>
           <ListItem>
             <ItemHeader onClick={() => listClick('ecu')} className={activeList === 'ecu' ? 'kn-click-list' : ''}>
@@ -843,7 +627,7 @@ export const AntVPage: React.FC<Props> = (props: Props) => {
             {activeList === 'components' ? <ComponentsContent >
               {(componentsList || []).map((item: any, index: number) => {
                 return (
-                  <div className={item.isHasBg?'kn-components-item is-bg':'kn-components-item'} data-type="small" key={index} onMouseDown={(e) => startDrag(e, item)}>
+                  <div className={item.isHasBg ? 'kn-components-item is-bg' : 'kn-components-item'} data-type="small" key={index} onMouseDown={(e) => startDrag(e, item)}>
                     <SmallComponent node={{ data: item } as any}></SmallComponent>
                   </div>
                 )
