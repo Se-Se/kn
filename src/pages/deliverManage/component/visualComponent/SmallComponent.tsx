@@ -60,7 +60,7 @@ const componentArr = [
   },
   {
     type:'obd',
-    label:'obd',
+    label:'OBD',
     src:obdComponent
   },
   {

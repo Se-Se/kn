@@ -14,6 +14,7 @@ import { createCarModel, getCarModelList, getListGroup, getRelationAutoPartsList
 import { TreeTransferDrawer } from 'pages/deliverManage/component/treeTransfer';
 import { MyStenCil } from './components/antv/stencil';
 import { TestAntv } from './components/antv/testAntv/antvApp';
+import { AntVPage } from './components/antv/carAntV';
 
 
 const { DropdownMenu, DropdownItem } = Dropdown;
@@ -35,7 +36,6 @@ width: 100%;
 height: 100%;
 justify-content: flex-start;
 flex-wrap: wrap;
-border:1px solid  #f3f4f7;
 `
 const ContentWrap = style.div`
 display: flex;
@@ -50,7 +50,7 @@ flex-wrap: wrap;
     .list-content-inner{
         width:100%;
         height:100%;
-      
+        background-color:#FFFFFF;
         .tea-layout__content-body-inner{
             height: calc(100% - 85px);
         }
@@ -79,6 +79,24 @@ flex-wrap: wrap;
   color:#000000;
   height:48px;
   line-height:48px;
+}
+
+.kn-antv-content{
+  .tea-layout__content-body{
+    padding:0px !important;
+  }
+  .tea-layout__content-body-inner{
+    height:100%;
+  }
+  .t-tabs{
+    height:100%;
+  }
+  .t-tabs__content.t-is-top{
+    height:100%;
+  }
+  .t-tab-panel{
+    height:100%;
+  }
 }
 
 `;
@@ -369,7 +387,7 @@ export const Page: React.FC = () => {
             </Content>
           </div>
 
-          <Content className="">
+          <Content className={tabV==='2'?'kn-antv-content':''}>
             <Content.Header
               title={"零部件"}
               subtitle={
@@ -393,14 +411,20 @@ export const Page: React.FC = () => {
                 <TabPanel value="1" label="清单视图">
                   <div className="tabs-content" style={{ margin: 20,width:'100%',height:'100%' }}>
                     {/* <PartsList openPartsDrawer={openPartsDrawer} activeId={activeModelId} relationFlag={relationFlag}></PartsList> */}
+                     <MyStenCil></MyStenCil>
                     
-                    <TestAntv tabV={tabV} />
+                    {/* <TestAntv tabV={tabV} /> */}
+                    
+                    {/* <AntVPage tabV={tabV}/> */}
+                    
                   </div>
                 </TabPanel>
                 <TabPanel value="2" label="架构视图">
-                  <div className="tabs-content" style={{ margin: 20,width:'100%',height:'100%' }}>
-                    <MyStenCil></MyStenCil>
+                  <div className="tabs-content" style={{ margin: 0,padding:0,width:'100%',height:'100%' }}>
                     {/* <TestAntv tabV={tabV} /> */}
+                    {/* <MyStenCil></MyStenCil> */}
+                    <AntVPage tabV={tabV}/>
+                    
                   </div>
                 </TabPanel>
               </Tabs>

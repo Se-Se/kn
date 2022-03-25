@@ -14,11 +14,13 @@ import greenComponentCenter from '../../images/visual/icon_ecu_bg_green_center.s
 import greenComponentBottom from '../../images/visual/icon_ecu_bg_green_buttom.svg'
 import greenMobileComponentTitleIcon from '../../images/visual/icon_component_phone.svg'
 import greenCloudComponentTitleIcon from '../../images/visual/icon_component_cloud.svg'
+import MobileWithNoSystem from 'pages/deliverManage/images/visual/mobile_component_no_system.svg';
 const ComponentTitle = style.div`
   display:flex;
   height:41px;
   align-items:center;
   padding-left:15px;
+
 `;
 
 const ComponentTitleSpan = style.span`
@@ -27,7 +29,9 @@ const ComponentTitleSpan = style.span`
   font-size:16px;
   font-weight:bold;
   margin-left:15px;
-
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 `;
 
 const ComponentCenter = style.div`
@@ -36,6 +40,14 @@ const ComponentCenter = style.div`
   justify-content: center;
   font-family:'Noto Sans SC';
   font-size:12px;
+`
+const NoSystemContent = style.div`
+  height: 100%;
+  width: 100%;
+  line-height:36px;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
 `
 
 interface shapeProps {
@@ -49,77 +61,75 @@ export class CircleComponent extends React.Component<shapeProps> {
       if (node.hasChanged("data")) {
         return true;
       }
-      
+
     }
 
     return false;
   }
   hasNoSystem = () => {
-    const {componentName} = this.props.node?.data
+    const { componentName, type } = this.props.node?.data;
     return (
       <>
-        <div
+        <NoSystemContent
           style={{
-            backgroundImage: `url(${blueComponentWithNoSystem})`,
-            height: "100%",
-            width: "100%",
-            lineHeight: "36px",
+            backgroundImage: `url(${type === 'ecu' ? blueComponentWithNoSystem : MobileWithNoSystem}) `,
+            
           }}
         >
-          <ComponentTitleSpan style={{marginLeft:35}}>
+          <ComponentTitleSpan style={{ marginLeft: 35 }}>
             {componentName}
           </ComponentTitleSpan>
-        </div>
-      
+        </NoSystemContent>
+
       </>
     );
   };
-  titleIcon=()=>{
-    const {type} = this.props.node?.data
+  titleIcon = () => {
+    const { type } = this.props.node?.data
     let img = ''
     switch (type) {
       case 'ecu':
-        img= blueEcuComponentTitleIcon
+        img = blueEcuComponentTitleIcon
         break;
       case 'mobile':
-        img= greenMobileComponentTitleIcon
+        img = greenMobileComponentTitleIcon
         break;
       case 'cloud':
-        img= greenCloudComponentTitleIcon
+        img = greenCloudComponentTitleIcon
         break;
     }
     return img
   }
   hasSystem = () => {
-    const {type,componentName,system} = this.props.node?.data
+    const { type, componentName, system } = this.props.node?.data
     return (
       <>
-        <ComponentTitle style={type ==='ecu'?{ backgroundImage: `url(${blueComponentTitleBG})`}:{ backgroundImage: `url(${greenComponentTitleBG})`}}>
-          <img src={this.titleIcon()}/>
-          <ComponentTitleSpan>{componentName}</ComponentTitleSpan>         
+        <ComponentTitle style={type === 'ecu' ? { backgroundImage: `url(${blueComponentTitleBG})` } : { backgroundImage: `url(${greenComponentTitleBG})` }}>
+          <img src={this.titleIcon()} />
+          <ComponentTitleSpan>{componentName}</ComponentTitleSpan>
         </ComponentTitle>
-        {system.map((item:string,index:number)=>
-            index!==system.length-1?
-            <ComponentCenter style={{backgroundImage:type ==='ecu'? `url(${blueComponentCenter})`:`url(${greenComponentCenter})`,height:42}} key={index}>
+        {system.map((item: string, index: number) =>
+          index !== system.length - 1 ?
+            <ComponentCenter style={{ backgroundImage: type === 'ecu' ? `url(${blueComponentCenter})` : `url(${greenComponentCenter})`, height: 42 }} key={index}>
               {item}
-            </ComponentCenter>:
-            <ComponentCenter style={{backgroundImage:type ==='ecu'? `url(${blueComponentBottom})`:`url(${greenComponentBottom})`,height:41}} key={index}>
-            {item}
-          </ComponentCenter>
-            
-          )}
+            </ComponentCenter> :
+            <ComponentCenter style={{ backgroundImage: type === 'ecu' ? `url(${blueComponentBottom})` : `url(${greenComponentBottom})`, height: 41 }} key={index}>
+              {item}
+            </ComponentCenter>
+
+        )}
         <></>
       </>
     )
   };
   render() {
-    const {system}=this.props.node?.data
-    if(system.length>0){
-      return <>{this.props.node?.data&&this.hasSystem()}</>
+    const { system } = this.props.node?.data
+    if (system.length > 0) {
+      return <>{this.props.node?.data && this.hasSystem()}</>
     }
     else {
-      return <>{this.props.node?.data&&this.hasNoSystem()}</>;
+      return <>{this.props.node?.data && this.hasNoSystem()}</>;
     }
-    
+
   }
 }

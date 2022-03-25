@@ -112,9 +112,9 @@ export class MyStenCil extends React.Component{
     })
     
     const target = this.makeCircleOptions({componentName:'ICC',system:[],x:650,y:50,type:'ecu',})
-    const ecuBlueComponent = this.makeCircleOptions({componentName:'ICC',system:['Linuix模组','Linux-MPU'],x:350,y:100,type:'ecu',id:'ecuBlueComponent'})
-    const ecuBlueComponent1 = this.makeCircleOptions({componentName:'ICC',system:['Linuix模组'],x:350,y:350,type:'ecu',id:'ecuBlueComponent1'})
-    const ecuBlueComponent2 = this.makeCircleOptions({componentName:'ICC',system:['Linuix模组'],x:350,y:550,type:'ecu',id:'ecuBlueComponent2'})
+    const ecuBlueComponent = this.makeCircleOptions({componentName:'ICC0',system:['Linuix模组','Linux-MPU'],x:350,y:100,type:'ecu',id:'ecuBlueComponent'})
+    const ecuBlueComponent1 = this.makeCircleOptions({componentName:'ICC1',system:['Linuix模组'],x:350,y:350,type:'ecu',id:'ecuBlueComponent1'})
+    const ecuBlueComponent2 = this.makeCircleOptions({componentName:'ICC2',system:['Linuix模组'],x:350,y:550,type:'ecu',id:'ecuBlueComponent2'})
     const mobileGreenComponent = this.makeCircleOptions({componentName:'手机',system:['iOS','AliOs'],x:50,y:200,type:'mobile',id:'mobileGreenComponent'})
     const cloudGreenComponent = this.makeCircleOptions({componentName:'ICC',system:['Linuix模组'],x:650,y:200,type:'cloud',id:'cloudGreenComponent'})
     const routerComponent = this.makeSmallComponentOptions({data:{type:'router'},type:'smallComponent',x:950,y:50,id:'routerComponent',isHasBg:true})
